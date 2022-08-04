@@ -1,0 +1,23 @@
+$conn = new mysqli('localhost', 'root', 'root', 'contactos');
+if($conn->connect_error){
+    echo $error = $conn->connect_error;
+ $user = "root";
+$password = "root";
+$dtb = "contactos";
+$host = "localhost";
+
+$conn = mysqli_connect($host,$user,$password) or die("No se ha podido conectar");
+$db = mysqli_select_db($conn, $dtb) or die("no s eha podido conectar");
+
+    $conn = mysqli_connect("localhost", "root", "root","autos")
+or die ("No se ha podido conectar");
+$db = mysqli_select_db($conn, "autos") or die("no funciono");
+$consulta = "SELECT * FROM inventario";
+echo $consulta;
+$resultado = mysqli_query($conn, $consulta) or die("algo ha sido mal");
+echo "<table borde='2'>";
+echo "<tr>";
+echo "<th>Nombre</th>";
+echo "<th>Edad</th>";
+echo "</tr>";
+    
